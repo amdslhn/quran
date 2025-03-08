@@ -35,7 +35,7 @@ function App() {
       </div>
 
     <div className="flex mx-auto h-screen">
-      <div className="grid grid-cols-1 w-300 noto text-slate-700 overflow-y-scroll text-center overflow-hidden lg:max-w-[300px]">
+      <div className="grid grid-cols-1 w-300 noto m-2 text-slate-700 overflow-y-scroll text-center overflow-hidden lg:max-w-[300px]">
         {surah.map((surat) => (
           <div className="cursor-pointer border-1 my-0.5 bg-sky-300 border-slate-500 w-full py-1 rounded-2xl" key={surat.nomor}
               onClick={() => setNomor(surat.nomor)}>
@@ -52,15 +52,15 @@ function App() {
         <div className="text-black bg-slate-100 shadow-2xl w-800 overflow-y-scroll">
           {ayat.map((ayat) => (
             <div className="border-1 border-sky-300 py-4">
-                <p className="amiri text-2xl/15 text-right p-4">
+                <p className="amiri text-3xl/17 text-right p-4">
               {ayat.teksArab}
               <span className="border-2 px-2 py-2 text-xl mr-5 rounded-full">
                 {convertToArabicNumeric(ayat.nomorAyat)}
               </span>
             </p>
               
-            <p className="m-2 noto text-xl">{ayat.teksLatin}</p>
-            <p className="m-2 noto">
+            <p className="m-2 noto text-md">{ayat.teksLatin}</p>
+            <p className="m-2  noto">
               {ayat.teksIndonesia}
               
             </p>
